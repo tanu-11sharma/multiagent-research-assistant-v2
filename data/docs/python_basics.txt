@@ -1,0 +1,9 @@
+Title: Python Language Overview
+
+Python is a high-level, interpreted programming language known for its readable syntax and large standard library. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+
+Python uses dynamic typing, meaning variable types are checked at runtime rather than compile time. This makes Python flexible but means type-related bugs can surface later than in statically typed languages like Java or Rust.
+
+The Global Interpreter Lock, or GIL, is a mutex in the reference CPython implementation that allows only one thread to execute Python bytecode at a time. This limits true parallelism for CPU-bound multi-threaded programs, though it does not affect I/O-bound concurrency or multiprocessing, which uses separate processes instead of threads.
+
+Popular Python package managers include pip, the default installer that pulls packages from PyPI, and newer tools such as uv and poetry that add dependency resolution and lockfiles.
