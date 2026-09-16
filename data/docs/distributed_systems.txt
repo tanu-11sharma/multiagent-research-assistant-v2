@@ -1,0 +1,9 @@
+Title: Distributed Systems Basics
+
+A distributed system is a collection of independent computers that appear to their users as a single coherent system. The main goals of distributed systems are scalability, fault tolerance, and transparency.
+
+Consistency models describe the guarantees a distributed system offers about the order and visibility of updates. Strong consistency guarantees that all reads reflect the latest write, while eventual consistency only guarantees that all replicas converge given enough time without new updates.
+
+The CAP theorem states that a distributed data store can only provide two of the following three guarantees at the same time: Consistency, Availability, and Partition tolerance. Since network partitions are unavoidable in practice, most systems choose to trade off between consistency and availability during a partition.
+
+Common patterns for fault tolerance include replication, leader election, and consensus protocols such as Raft and Paxos. Replication copies data across multiple nodes so the system can survive node failures. Leader election ensures exactly one node coordinates writes at a time.
