@@ -1,0 +1,9 @@
+Title: REST API Design Principles
+
+REST, or Representational State Transfer, is an architectural style for designing networked applications. A RESTful API exposes resources, identified by URLs, that clients manipulate using standard HTTP methods: GET to read, POST to create, PUT or PATCH to update, and DELETE to remove.
+
+Idempotency is an important property for API design. GET, PUT, and DELETE requests should be idempotent, meaning making the same request multiple times produces the same result as making it once. POST requests are typically not idempotent because they usually create a new resource each time.
+
+HTTP status codes communicate the outcome of a request. The 2xx range indicates success, 4xx indicates a client error such as a malformed request or missing authentication, and 5xx indicates a server-side error. Well-designed APIs use specific status codes, such as 404 for a missing resource or 429 for rate limiting, rather than always returning a generic 200 or 500.
+
+API versioning strategies include putting the version in the URL path, such as /v1/resource, using a custom request header, or using content negotiation via the Accept header. URL path versioning is the most common because it is simple and visible in logs.
