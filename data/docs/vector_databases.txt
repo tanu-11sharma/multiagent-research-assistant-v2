@@ -1,0 +1,9 @@
+Title: Vector Databases and Embeddings
+
+An embedding is a numerical vector representation of data, such as text or images, produced by a machine learning model so that semantically similar items end up close together in vector space.
+
+A vector database is a specialized data store optimized for storing embeddings and performing fast approximate nearest neighbor search over them. Popular vector databases include Qdrant, Pinecone, Weaviate, and Milvus.
+
+Approximate nearest neighbor search algorithms, such as HNSW (Hierarchical Navigable Small World graphs), trade a small amount of recall for large gains in query speed compared to brute-force exact search, which becomes slow as the number of vectors grows into the millions.
+
+Retrieval-Augmented Generation, or RAG, combines a retrieval step over a vector database with a generative language model. The retrieved passages are inserted into the model's prompt as context, which lets the model answer questions using up-to-date or private information it was never trained on, and lets the answer be grounded in cited sources.
