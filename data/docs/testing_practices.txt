@@ -1,0 +1,9 @@
+Title: Software Testing Practices
+
+Unit tests verify the behavior of a single function or class in isolation, typically using mocks or stubs to replace external dependencies such as databases or network calls. They should run fast and form the bulk of a healthy test suite, following the shape of the classic testing pyramid.
+
+Integration tests verify that multiple components work together correctly, such as a service talking to a real database or another service. They are slower and fewer in number than unit tests but catch bugs that unit tests, with their mocked dependencies, cannot.
+
+End-to-end tests exercise the full system the way a real user or client would, often through the UI or public API. They provide the highest confidence but are the slowest, most brittle, and most expensive to maintain, so most teams keep only a small number of them focused on critical user journeys.
+
+Test-driven development, or TDD, is a workflow where a developer writes a failing test before writing the implementation code that makes it pass, then refactors. Proponents argue it produces better-designed, well-tested code by construction, though it requires discipline and is not universally adopted.
